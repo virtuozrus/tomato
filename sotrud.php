@@ -1,7 +1,10 @@
-<?php 
-
-
-
- ?>
-
-  INSERT INTO clients (fio,date,passport,mobile,address,email,target) VALUES ('Чебурек Чебуреков','1944-10-21',1234123123,81112221122,'город картошки и чебуреков, улица wwww, квртира точка ком','wowow@wow.ru','client');
+<?php
+	  if (isset($_POST["fio"])) {
+	    $sql = mysqli_query($link, "INSERT INTO `clients` (fio,date,passport,mobile,address,email,target) VALUES ('{$_POST['fio']}', '{$_POST['date']}', {$_POST['passport']}, {$_POST['mobile']}, '{$_POST['address']}', '{$_POST['email']}', '{$_POST['target']}')");
+	    if ($sql) {
+	      echo '<p id="green">Данные успешно добавлены.</p>';
+	    } else {
+	      echo '<p id="red">Произошла ошибка: ' . mysqli_error($link) . '</p>';
+	    }
+	}
+?>

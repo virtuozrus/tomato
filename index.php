@@ -94,12 +94,12 @@
 
 <!-- запрос на сотрудничество -->
 <div id="sotrud" class="animated">
-	
+
 <!-- подключение к дб -->
 		<?php
 		    $host = 'localhost';
-		    $user = 'virtuoz'; 
-		    $pass = '8321123';
+		    $user = 'root'; 
+		    $pass = '83211238';
 		    $db_name = 'greenway_db';
 		    
 		    $link = mysqli_connect($host, $user, $pass, $db_name);
@@ -118,7 +118,7 @@
 <!-- отправка данных из формы -->
 	<?php
 		  if (isset($_POST["fio"])) {
-		    $sql = mysqli_query($link, "INSERT INTO `clients` (fio,date,passport,mobile,address,email,target) VALUES ('{$_POST['fio']}', '{$_POST['date']}', {$_POST['passport']}, {$_POST['mobile']}, '{$_POST['address']}', '{$_POST['email']}', '{$_POST['target']}')");
+		    $sql = mysqli_query($link, "INSERT INTO `clients` (fio,date,passport,mobile,address,email,target) VALUES ('{$_POST['fio']}', '{$_POST['date']}', '{$_POST['passport']}', '{$_POST['mobile']}', '{$_POST['address']}', '{$_POST['email']}', '{$_POST['target']}')");
 		    if ($sql) {
 		      echo '<p id="green">Данные успешно добавлены.</p>';
 		    } else {
@@ -128,7 +128,7 @@
 	?>
 
 	<div id="form">
-		<form method="post" action="sotrud.php">
+		<form method="post" action="">
 			Приглашаю Вас присоединиться к эко-компании 🍀GreenWay🍀<br>
 			В результате: <br> 
 			☘ Вы полностью исключите бытовую химию у себя дома, тем самым обеспечите здоровье семьи. <br>
@@ -143,7 +143,7 @@
 			Дата рождения: <br>
 			<input type="date" name="date" required><br>
 			Номер и серия паспорта РФ:<br>
-			<input type="text" name="pasport" required maxlength="11"><br>
+			<input type="text" name="passport" required maxlength="11"><br>
 			Мобильный телефон:<br>
 			<input type="tel" name="mobile" required maxlength="12"><br>
 			Ваш город, адрес и индекс:<br>
