@@ -1,0 +1,11 @@
+.idea
+.DS_Store
+/.env
+Thumbs.db
+
+/composer.phar
+/vendor
+
+/node_modules
+
+/config.php
