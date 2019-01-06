@@ -122,6 +122,7 @@ include 'config.php';
 
     <!-- подключение к дб -->
     <?php
+
     $host = $config['DB_HOST'];
     $user = $config['DB_USER'];
     $pass = $config['DB_PASS'];
@@ -133,6 +134,11 @@ include 'config.php';
         echo 'Не могу соединиться с БД. Код ошибки: ' . mysqli_connect_errno() . ', ошибка: ' . mysqli_connect_error();
         exit;
     }
+
+    mysqli_query($link, "SET NAMES 'utf8';");
+    mysqli_query($link, "SET CHARACTER SET 'utf8';");
+    mysqli_query($link, "SET SESSION collation_connection = 'utf8_general_ci';");
+
     ?>
 
     <h2 class="even" id="center">ЗАПРОС НА СОТРУДНИЧЕСТВО</h2>
