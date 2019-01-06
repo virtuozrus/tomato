@@ -149,6 +149,14 @@ div #form {
 	height: 403px;
 }
 
+p #green {
+	color: green;
+}
+
+p #red {
+	color: red;
+}
+
 /*красивый фон*/
 .animated {
 	width: 100%;
@@ -197,6 +205,8 @@ div #form {
 		background-position: 0% 50%
 	}
 }
+
+/*размеры основных блоков*/
 
 #home {
 	width: 100%;

@@ -17,10 +17,10 @@
 	<header>
 		<!-- ссылки на соц сети -->
 		<div id="social">
-			<a href="http://vk.com"><img src="images/vk.png" width="50px" height="50px"></a>
-			<a href="http://facebook.com"><img src="images/fb.png" width="50px" height="50px"></a>
-			<a href="http://instagram.com"><img src="images/inst.png" width="50px" height="50px"></a>
-			<a href="http://youtube.com"><img src="images/youtube.png" width="50px" height="50px"></a>
+			<a href="https://vk.com/onlinegreenway"><img src="images/vk.png" width="50px" height="50px"></a>
+			<a href="https://www.facebook.com/TatyanaGreenWay/"><img src="images/fb.png" width="50px" height="50px"></a>
+			<a href="https://instagram.com/tatiana.nikylina"><img src="images/inst.png" width="50px" height="50px"></a>
+			<a href="https://www.youtube.com/channel/UChQcwT7fvzOJ3YL-5EgFPFQ?view_as=subscriber"><img src="images/youtube.png" width="50px" height="50px"></a>
 		</div>
 
 		<h1>GREENWAY&#9658;</h1>
@@ -94,10 +94,39 @@
 
 <!-- запрос на сотрудничество -->
 <div id="sotrud" class="animated">
+	
+<!-- подключение к дб -->
+		<?php
+		    $host = 'localhost';
+		    $user = 'virtuoz'; 
+		    $pass = '8321123';
+		    $db_name = 'greenway_db';
+		    
+		    $link = mysqli_connect($host, $user, $pass, $db_name);
+		   
+		    if (!$link) {
+		      echo 'Не могу соединиться с БД. Код ошибки: ' . mysqli_connect_errno() . ', ошибка: ' . mysqli_connect_error();
+		      exit;
+		    }
+		  ?>
+
 	<h2 class="even" id="center">ЗАПРОС НА СОТРУДНИЧЕСТВО</h2>
 		<div id="nik">
 			<img src="images/nik_greenway.jpg">
 		</div>
+
+<!-- отправка данных из формы -->
+	<?php
+		  if (isset($_POST["fio"])) {
+		    $sql = mysqli_query($link, "INSERT INTO `clients` (fio,date,passport,mobile,address,email,target) VALUES ('{$_POST['fio']}', '{$_POST['date']}', {$_POST['passport']}, {$_POST['mobile']}, '{$_POST['address']}', '{$_POST['email']}', '{$_POST['target']}')");
+		    if ($sql) {
+		      echo '<p id="green">Данные успешно добавлены.</p>';
+		    } else {
+		      echo '<p id="red">Произошла ошибка: ' . mysqli_error($link) . '</p>';
+		    }
+  		}
+	?>
+
 	<div id="form">
 		<form method="post" action="sotrud.php">
 			Приглашаю Вас присоединиться к эко-компании 🍀GreenWay🍀<br>
