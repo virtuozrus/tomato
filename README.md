@@ -1,12 +1,14 @@
-# Запросы для БД
+# GreenWay
 
-```sql
-INSERT INTO clients (fio, date, passport, mobile,address, email, target) VALUES ('Чебуречный автомат', '1999-12-12', '1223 123123', '89993331155', 'поселок Чебуреков, улица бигмаков дом www', 'kopkop@mail.ru', 'client');
+
+## Инициализация файла конфигурации
+```bash
+cp .config.example .config
 ```
 
-## 
-```sql
-ALTER TABLE `greenway_db` . `clients` CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+## Подкючение к консольной программе MySQL
+```bash
+sudo mysql -u root -p
 ```
 
 ## Создание таблицы клиентов
@@ -23,12 +25,12 @@ CREATE TABLE clients (
 ) CHARACTER SET utf8 COLLATE utf8_general_ci;
 ```
 
-## Инициализация файла конфигурации
-```bash
-cp .config.example .config
+## Клиент по умолчанию
+```sql
+INSERT INTO clients (fio, date, passport, mobile,address, email, target) VALUES ('Чебуречный автомат', '1999-12-12', '1223 123123', '89993331155', 'поселок Чебуреков, улица бигмаков дом www', 'kopkop@mail.ru', 'client');
 ```
 
-## Подкючение к консольной программе MySQL
-```bash
-sudo mysql -u root -p
+### Смена кодировки таблицы клиентов
+```sql
+ALTER TABLE `greenway_db` . `clients` CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
 ```
