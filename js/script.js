@@ -5,6 +5,10 @@ $(() => {
         redrawDotNav();
     });
 
+    if ($('[type="date"]').prop('type') !== 'date') {
+        $('[type="date"]').datepicker();
+    }
+
     $('.n_1').on('click', () => {
         $('html, body').animate({scrollTop: 0}, 1000);
         return false;
