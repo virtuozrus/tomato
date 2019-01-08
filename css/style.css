@@ -40,15 +40,20 @@ h2.even {
     width: 100%;
     margin: 0 auto;
     height: 100%;
+    /*display: flex;*/
+    /*flex-wrap: nowrap;*/
 }
 
-.how_div {
+#how .how_div {
     float: left;
     line-height: 100%;
     margin-top: 100px;
     color: green;
     width: 33%;
     text-align: center;
+    /*width: 33%;*/
+    /*margin: 20px;*/
+    /*text-align: center;*/
 }
 
 .how_div p {
@@ -149,13 +154,40 @@ div #form {
     height: 403px;
 }
 
-p #green {
-    color: green;
+div.prod_div {
+    border: 1px solid #cccccc;
+    height: 500px;
+    top: 15%;
+    position: relative;
 }
 
-p #red {
-    color: red;
+div.prod_div:hover {
+    border: 1px solid black;
 }
+
+div.prod_div img {
+    width: 100%;
+    height: auto;
+}
+
+div.prod_descr {
+    padding: 10px;
+    text-align: center;
+    display: contents;
+}
+
+.prod_descr span {
+    color: green;
+   font-weight: bold;
+}
+
+#prod div{
+    box-sizing: border-box;
+    padding: 5px;
+    float: left;
+    width: 24.99999%;
+}
+
 
 /*красивый фон*/
 .animated {
@@ -227,7 +259,7 @@ p #red {
 #prod {
     background-color: white;
     width: 100%;
-    height: 100vh;
+    height: 200vh;
 }
 
 #sotrud {
