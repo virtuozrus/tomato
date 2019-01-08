@@ -3,7 +3,7 @@
 
 ## Инициализация файла конфигурации
 ```bash
-cp .config.example .config
+cp config.php.example config.php
 ```
 
 ## Подкючение к консольной программе MySQL
