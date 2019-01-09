@@ -325,7 +325,7 @@ include 'config.php';
             Ваш город, адрес и индекс:<br>
             <input type="text" name="address" required><br>
             E-mail:<br>
-            <input type="email" name="email"><br>
+            <input type="email" name="email" required><br>
             Цель вашей регистрации:<br>
             <input type="radio" name="target" value="client" required>Клиент<br>
             <input type="radio" name="target" value="prodavec" required>Продавец<br>
