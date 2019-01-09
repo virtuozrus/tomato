@@ -72,11 +72,20 @@ h4 {
 }
 
 div div.whatis_class {
+    display: flex;
+    flex-wrap: nowrap;
+    top: 15%;
     position: relative;
-    width: 90%;
-    left: 4%;
-    top: 20%;
+}
+
+div div.whatis_class > div {
+    width: 45%;
     text-align: justify;
+}
+
+.center_img {
+    display: block;
+    margin: 50px auto;
 }
 
 div #social {
@@ -208,9 +217,9 @@ div.prod_descr {
     background: linear-gradient(
             -45deg, #f1a237, #94c827, #6bbb5d, #d9ffd3);
     background-size: 400% 400%;
-    -webkit-animation: Gradient 8s ease infinite;
-    -moz-animation: Gradient 8s ease infinite;
-    animation: Gradient 8s ease infinite;
+    -webkit-animation: Gradient 6s ease infinite;
+    -moz-animation: Gradient 6s ease infinite;
+    animation: Gradient 6s ease infinite;
 }
 
 @-webkit-keyframes Gradient {
@@ -263,7 +272,7 @@ div.prod_descr {
 
 #whatis {
     width: 100%;
-    height: 150vh;
+    height: 180vh;
 }
 
 #prod {
