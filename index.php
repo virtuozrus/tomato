@@ -8,6 +8,8 @@ include 'config.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="greenway, Татьяна Никулина, бизнес">
+    <meta name="description" content="Greenway">
     <title>Greenway &ndash; Бизнес будущего</title>
     <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
@@ -291,9 +293,9 @@ include 'config.php';
     if (isset($_POST["fio"])) {
         $sql = mysqli_query($link, "INSERT INTO `clients` (fio,date,passport,mobile,address,email,target) VALUES ('{$_POST['fio']}', '{$_POST['date']}', '{$_POST['passport']}', '{$_POST['mobile']}', '{$_POST['address']}', '{$_POST['email']}', '{$_POST['target']}')");
         if ($sql) {
-            echo '<p id="green">Данные успешно добавлены.</p>';
+            echo '<p>Данные успешно добавлены.</p>';
         } else {
-            echo '<p id="red">Произошла ошибка: ' . mysqli_error($link) . '</p>';
+            echo '<p>Произошла ошибка: ' . mysqli_error($link) . '</p>';
         }
     }
     ?>
