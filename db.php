@@ -20,16 +20,28 @@ mysqli_query($connect, "SET SESSION collation_connection = 'utf8_general_ci';");
 
 $select = mysqli_query($connect, "SELECT * FROM clients;");
 
+echo "<table>
+<tr>
+<th>ФИО</th>
+<th>Дата рождения</th>
+<th>Паспортные данные</th>
+<th>Телефон</th>
+<th>Адрес</th>
+<th>Email</th>
+<th>Цель</th>
+</tr>";
 while ($row = mysqli_fetch_assoc($select)) {
-    echo $row["id"] .
-        " - <b>ФИО:</b> " . $row["fio"] . "; " .
-        "<b>Дата рождения:</b> " . $row["date"] . "; " .
-        "<b>Паспортные данные:</b> " . $row["passport"] . "; " .
-        "<b>Телефон:</b> " . $row["mobile"] . "; " .
-        "<b>Адрес:</b> " . $row["address"] . "; " .
-        "<b>Email:</b> " . $row["email"] . "; " .
-        "<b>Цель:</b> " . $row["target"] . "<br>";
+    echo "<tr>";
+    echo "<td>" . $row["fio"] . "</td>";
+    echo "<td>" . $row["date"] . "</td>";
+    echo "<td>" . $row["passport"] . "</td>";
+    echo "<td>" . $row["mobile"] . "</td>";
+    echo "<td>" . $row["address"] . "</td>";
+    echo "<td>" . $row["email"] . "</td>";
+    echo "<td>" . $row["target"] . "</td>";
+    echo "</tr>";
 }
+echo "</table>";
 
 mysqli_close($connect);
 ?>
