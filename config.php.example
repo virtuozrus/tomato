@@ -5,5 +5,4 @@ $config = [
     'DB_USER' => 'root',
     'DB_PASS' => '83211238',
     'DB_NAME' => 'greenway_db',
-    'NAME_1' => 'Вася Пупкин',
 ];

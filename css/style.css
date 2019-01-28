@@ -40,8 +40,6 @@ h2.even {
     width: 100%;
     margin: 0 auto;
     height: 100%;
-    /*display: flex;*/
-    /*flex-wrap: nowrap;*/
 }
 
 #how .how_div {
@@ -51,9 +49,6 @@ h2.even {
     color: green;
     width: 33%;
     text-align: center;
-    /*width: 33%;*/
-    /*margin: 20px;*/
-    /*text-align: center;*/
 }
 
 .how_div p {
@@ -95,7 +90,7 @@ div #social {
     top: 5%;
 }
 
-/*верхняя менюшка*/
+/*меню */
 div #menu {
     position: absolute;
     right: 1%;
@@ -128,7 +123,7 @@ div #menu li a:hover {
     color: green;
 }
 
-/*планшет*/
+/*планшет */
 #tablet img {
     position: absolute;
     width: 618px;
@@ -152,7 +147,7 @@ div #menu li a:hover {
     margin-left: 54%;
 }
 
-/*форма*/
+/*форма */
 div #form {
     text-shadow: 1px 1px grey;
     position: relative;
@@ -209,7 +204,7 @@ div.prod_descr {
 }
 
 
-/*красивый фон*/
+/*анимированный фон*/
 .animated {
     width: 100%;
     height: 90vh;
@@ -291,7 +286,7 @@ footer {
     text-align: center;
 }
 
-/*боковые якоря (спижжено)*/
+/*боковые якоря */
 #side {
     z-index: 5;
     position: fixed;
@@ -362,4 +357,3 @@ footer {
 #side a:hover span {
     display: block;
 }
-/*конец спижженого*/
